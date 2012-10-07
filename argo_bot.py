@@ -1,7 +1,6 @@
 #! /usr/bin/python -B
 
-from argo_bot.bot import Bot
+from argo_bot.bot import IRCBot
 
 if __name__ == "__main__":
-    bot = Bot()
-    bot.start()
+    IRCBot().start()
