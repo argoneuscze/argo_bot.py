@@ -9,9 +9,11 @@ class IRCBot(object):
         reactor.connectTCP(Config._host, Config._port, IRCBotFactory())
         reactor.run()
 
+# Bot protocol
 class IRCBotProtocol(irc.IRCClient):
     _name = Config._name
 
+# Bot factory
 class IRCBotFactory(protocol.ReconnectingClientFactory):
     protocol = IRCBotProtocol
     channels = [Config._channel]
